@@ -2,8 +2,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Car[] cars = new Car[1];
+        Car[] cars = new Car[31];
         cars[0] = new FordFocus();
+        cars[1] = new SubaruWRX();
+        cars[2] = new SkodaOctavia();
 
         System.out.println("List of models:");
         for (int i = 0; i < cars.length; i++) {
