@@ -50,31 +50,4 @@ public class SourceMapParser {
         }
         return res;
     }
-
-    /*public SourceMapParser(String path) throws IOException {
-        String input = readFile(path);
-        JsonParser parser = new JsonParser();
-        JsonObject mainObject = parser.parse(input).getAsJsonObject();
-        names = mainObject.getAsJsonArray("names");
-        sources = mainObject.getAsJsonArray("sources");
-        JsonPrimitive pItem = mainObject.getAsJsonPrimitive("mappings");
-        mappings = pItem.getAsString().split(",");
-
-    }
-
-    public JsonArray getNames() {
-        return names;
-    }
-
-    public JsonArray getSources() {
-        return sources;
-    }
-
-    public String[] getMappings() {
-        return mappings;
-    }
-
-    private static String readFile(String fileName) throws IOException {
-        return new String(Files.readAllBytes(Paths.get(fileName)));
-    }*/
 }

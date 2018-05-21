@@ -19,10 +19,6 @@ public class Main {
         int lastName = 0;
         for (String s : mappings) {
             res = decoder.decode(s);
-            /*for (int i: res) {
-                System.out.print(i + " ");
-            }
-            System.out.print("\n");*/
             lastOutputIndex += res.get(0);
             lastFile += res.get(1);
             lastInputColumn += res.get(2);
