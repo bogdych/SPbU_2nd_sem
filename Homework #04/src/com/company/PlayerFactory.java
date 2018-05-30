@@ -1,5 +1,10 @@
 package com.company;
 
+import com.company.players.AIPlayerGreedy;
+import com.company.players.AIPlayerTableLookup;
+import com.company.players.Player;
+import com.company.players.RealPlayer;
+
 public class PlayerFactory {
     private final static int RealPlayer = 1;
     private final static int AIPlayerGreedy = 2;

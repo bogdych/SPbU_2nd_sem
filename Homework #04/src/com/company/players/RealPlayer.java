@@ -1,4 +1,4 @@
-package com.company;
+package com.company.players;
 
 import java.util.Scanner;
 

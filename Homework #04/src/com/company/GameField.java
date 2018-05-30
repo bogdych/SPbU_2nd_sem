@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.players.Player;
+
 public class GameField {
     public char[][] field = {
             {'-', '-', '-'},

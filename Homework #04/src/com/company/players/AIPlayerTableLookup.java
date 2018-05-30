@@ -1,4 +1,4 @@
-package com.company;
+package com.company.players;
 
 public class AIPlayerTableLookup extends Player {
     private int[][] preferredMoves = {

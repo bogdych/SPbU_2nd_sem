@@ -1,4 +1,4 @@
-package com.company;
+package com.company.players;
 
 public abstract class Player {
     protected char mySymbol;
