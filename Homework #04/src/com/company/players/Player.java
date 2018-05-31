@@ -13,7 +13,7 @@ public abstract class Player {
             {'-', '-', '-'}
     };
 
-    public Player (int index) {
+    public void setSymbol(int index) {
         if (index % 2 == 0) {
             mySymbol = 'x';
             oppSymbol = 'o';

@@ -8,6 +8,7 @@ public class Main {
     private final static int RealPlayer = 1;
     private final static int AIPlayerGreedy = 2;
     private final static int AIPlayerTableLookup = 3;
+    private final static int AIPlayerRandom = 4;
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -16,14 +17,16 @@ public class Main {
         System.out.println("1. RealPlayer");
         System.out.println("2. Greedy AI");
         System.out.println("3. Table Lookup AI");
+        System.out.println("4. Random AI");
         System.out.println("Enter number of type for 1st player");
         int ind1 = getInd(in);
         System.out.println("Enter number of type for 2nd player");
         int ind2 = getInd(in);
 
         Player[] players = {
-                PlayerFactory.getPlayer(ind1, 0),
-                PlayerFactory.getPlayer(ind2, 1)
+                PlayerFactory.getPlayer(ind2, 1),
+                PlayerFactory.getPlayer(ind1, 0)
+
         };
         GameField game = new GameField();
         game.play(players);
@@ -34,7 +37,7 @@ public class Main {
         int ind = 1;
         while (!correctData) {
             ind = in.nextInt();
-            if (ind >= 0 && ind <= AIPlayerTableLookup) {
+            if (ind >= 0 && ind <= AIPlayerRandom) {
                 correctData = true;
             }
             else {
