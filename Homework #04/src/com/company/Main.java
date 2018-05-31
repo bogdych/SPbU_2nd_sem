@@ -1,6 +1,8 @@
 package com.company;
 
 import com.company.players.Player;
+import org.picocontainer.DefaultPicoContainer;
+import org.picocontainer.MutablePicoContainer;
 
 import java.util.Scanner;
 
@@ -12,6 +14,8 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+        MutablePicoContainer container = new DefaultPicoContainer();
+        container.addComponent(GameField.class);
 
         System.out.println("Here's a list of types of players:");
         System.out.println("1. RealPlayer");
@@ -24,11 +28,11 @@ public class Main {
         int ind2 = getInd(in);
 
         Player[] players = {
-                PlayerFactory.getPlayer(ind2, 1),
-                PlayerFactory.getPlayer(ind1, 0)
-
+                PlayerFactory.getPlayer(container, ind2, 1),
+                PlayerFactory.getPlayer(container, ind1, 0)
         };
-        GameField game = new GameField();
+
+        GameField game = container.getComponent(GameField.class);
         game.play(players);
     }
 
