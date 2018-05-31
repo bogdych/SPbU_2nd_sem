@@ -3,6 +3,11 @@ import java.util.ArrayList;
 public class SourceMapDecoder {
     private static final String base64Table = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
     private ArrayList<Integer> result;
+    private static final int mask1 = 30;
+    private static final int mask2 = 31;
+    private static final int fullMask = 32;
+    private static final int amountOfBits1 = 5;
+    private static final int amountOfBits2 = 4;
 
     public SourceMapDecoder() {
         result = new ArrayList<>();
@@ -23,13 +28,13 @@ public class SourceMapDecoder {
             interValue = getValue(c);
             if (!isStarted) {
                 sign = !((interValue & 1) == 0);
-                finalValue = (interValue & 30) >> 1;
+                finalValue = (interValue & mask1) >> 1;
                 isStarted = true;
             }
             else {
-                finalValue = finalValue + ((interValue & 31) << ((ccouner == 1) ? 5 : 4));
+                finalValue = finalValue + ((interValue & mask2) << ((ccouner == 1) ? amountOfBits1 : amountOfBits2));
             }
-            if ((interValue & 32) == 0) {
+            if ((interValue & fullMask) == 0) {
                 isStarted = false;
                 ccouner = 0;
                 if (sign) {
@@ -40,7 +45,7 @@ public class SourceMapDecoder {
             }
             ccouner++;
         }
-        if (result.size() == 4) {
+        if (result.size() == amountOfBits2) {
             result.add(0);
         }
         return result;
