@@ -1,0 +1,14 @@
+{
+  "version": 3,
+  "sources": [
+    "input.js"
+  ],
+  "names": [
+    "stayClear",
+    "x",
+    "y",
+    "console",
+    "log"
+  ],
+  "mappings": "AAAA,SAASA,UAAUC,EAAGC,GAClB,OAAOD,EAAIC,EAGfC,QAAQC,IAAIJ,UAAU,GAAI"
+}

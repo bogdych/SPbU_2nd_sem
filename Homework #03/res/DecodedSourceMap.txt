@@ -1,0 +1,12 @@
+Symbol 0 maps to column 0, symbol 0 in file input.js and belongs to stayClear
+Symbol 9 maps to column 0, symbol 9 in file input.js and belongs to stayClear
+Symbol 19 maps to column 0, symbol 19 in file input.js and belongs to x
+Symbol 21 maps to column 0, symbol 22 in file input.js and belongs to y
+Symbol 24 maps to column 1, symbol 4 in file input.js and belongs to y
+Symbol 31 maps to column 1, symbol 11 in file input.js and belongs to x
+Symbol 33 maps to column 1, symbol 15 in file input.js and belongs to y
+Symbol 35 maps to column 4, symbol 0 in file input.js and belongs to console
+Symbol 43 maps to column 4, symbol 8 in file input.js and belongs to log
+Symbol 47 maps to column 4, symbol 12 in file input.js and belongs to stayClear
+Symbol 57 maps to column 4, symbol 22 in file input.js and belongs to stayClear
+Symbol 60 maps to column 4, symbol 26 in file input.js and belongs to stayClear
