@@ -3,10 +3,6 @@ package com.company.players;
 import java.util.Scanner;
 
 public class RealPlayer extends Player {
-    public RealPlayer(int index) {
-        super(index);
-    }
-
     @Override
     public int[] move(char[][] f) {
         int[] coordinates = getCoordinates();

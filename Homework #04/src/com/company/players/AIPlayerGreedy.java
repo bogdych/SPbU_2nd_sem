@@ -6,10 +6,6 @@ public class AIPlayerGreedy extends Player {
     private final static int draw = 3;
     private final static int cont = 4;
 
-    public AIPlayerGreedy (int index) {
-        super(index);
-    }
-
     @Override
     public int[] move(char[][] field) {
         updateLocalField(field);
