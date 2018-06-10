@@ -314,4 +314,21 @@ void main() {
         printf("%d\n", *stack->top);
         stack->top--;
     }
+
+    free(data);
+    free(stack->bottom);
+    free(stack);
+    for(int i = 0; instructions[i] != NULL; i++) {
+        free(instructions[i]->cmd);
+        if (instructions[i]->arg) {
+            free(instructions[i]->arg);
+        }
+        free(instructions[i]);
+    }
+    free(instructions);
+    for(int i = 0; i <= labelPtr; i++) {
+        free(labels[i]->name);
+        free(labels[i]);
+    }
+    free(labels);
 }
